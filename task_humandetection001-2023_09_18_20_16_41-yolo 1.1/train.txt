@@ -1,0 +1,7 @@
+data/obj_train_data/t2.jpeg
+data/obj_train_data/t3.jpeg
+data/obj_train_data/t4.jpeg
+data/obj_train_data/t5.jpeg
+data/obj_train_data/testimg - Copy.jpg
+data/obj_train_data/testimg.jpg
+data/obj_train_data/testimg1.jpeg
