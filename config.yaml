@@ -1,8 +1,0 @@
-
-path: "C:\Users\Ishan Roy Barman\Desktop\hackathon\task_humandetection001-2023_09_18_20_16_41-yolo 1.1"
-train: image/train/image  # train images (relative to 'path')
-val: image/train/image  # val images (relative to 'path')
-
-# Classes
-names:
-  0: human
