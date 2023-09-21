@@ -8,8 +8,13 @@ app = Flask(__name__)
 # flaskDebug = os.getenv("FLASK_DEBUG")
 
 @app.route("/base")
-def about():
+def base():
   return render_template('base.html')
+
+@app.route("/")
+@app.route("/home")
+def home_page():
+  return render_template('home.html')
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug = True)
