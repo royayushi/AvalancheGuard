@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light  fixed-top">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand" href="/">My Website</a> -->
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img src="static/logos.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          Find My Bus
+          </a>
+        
+        </div>
+      </nav>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == '/home' %}active{% endif %}" href="{{ url_for('home_page') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == '/track' %}active{% endif %}" href="{{ url_for('track') }}">Track</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == '/about' %}active{% endif %}" href="{{ url_for('about') }}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == '/help' %}active{% endif %}" href="{{ url_for('help') }}">Help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == '' %}active{% endif %}" href="https://twitter.com/_FindMyBus_" target="_blank" >Twitter  <i class="bi bi-twitter"></i></a>
+          </li>
+        </ul>
+        <hr>
+      </div>
+    </div>
+    
+  </nav>
+  <div style="height:80px"></div>
+  
+  <style>
+    .navbar-nav .active {
+    color: #000000;
+    text-decoration: underline;
+    
+  }
+  
+  </style>
