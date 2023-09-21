@@ -51,3 +51,21 @@
 .custom-card {
   width: 500px;
 }
+
+/* Initially hide the form and set transition properties */
+.hidden-form {
+  display: none;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+
+/* Style for card with click behavior */
+.card-clickable {
+  cursor: pointer;
+}
+
+/* Style for visible form with sliding animation */
+.visible-form {
+  display: block;
+  transform: translateX(0);
+}

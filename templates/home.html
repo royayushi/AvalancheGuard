@@ -50,7 +50,7 @@
       <!-- something -->
       <div class="row">
         <div class="col-6 custom-card">
-            <div class="card">
+            <div class="card card-clickable">
                 <img src="static\obj-det3.jpg" alt="Detect avalanche victim from image" class="card-img-top" style="width: 475px; height: 328px;">
                 <div class="card-body">
                     <h5 class="card-title">Detect Avalanche Victim from Image</h5>
@@ -58,6 +58,14 @@
                         This will help in detecting victims trapped in avalanche from the satellite images received during the disaster.
                     </p>
                 </div>
+
+                <div class="form-container">
+                    <form method="POST" enctype="multipart/form-data" class="hidden-form">
+                        <input type="file" name="file" accept=".jpg, .png, .jpeg">
+                        <input type="submit" value="Detect Avalanche Victims">
+                    </form>
+                </div>
+
             </div>
         </div>
 
@@ -78,7 +86,7 @@
   </div>
   
 
-  <div class="reveal">
+  <!-- <div class="reveal">
      <div class="text-center mt-4 mb-4 ">
         <h2 class="track animate__heartBeat mt-4">Live Location </h2>
         <hr>
@@ -99,25 +107,28 @@
               Live Location, you'll have the power to track your bus and 
               plan your journey accordingly.<br>
 
-To use this feature, simply open Find My Bus. You'll see a live map of your 
-bus route with an icon representing the location of your bus. 
-As the bus moves along its route, the icon will update in real-time 
-to show you its exact location.
-It's our way of making your daily commute more efficient, convenient, and stress-free.<br></p>
-<p class="text-center"><a   href="/track" class="btn btn-dark px-4 col-md-4 text-center space" type="submit"> Track Here</a>
-</p>
+              To use this feature, simply open Find My Bus. You'll see a live map of your 
+              bus route with an icon representing the location of your bus. 
+              As the bus moves along its route, the icon will update in real-time 
+              to show you its exact location.
+              It's our way of making your daily commute more efficient, convenient, and stress-free.<br></p>
+            <p class="text-center"><a   href="/track" class="btn btn-dark px-4 col-md-4 text-center space" type="submit"> Track Here</a>
+            </p>
         </div>
 
 
         
      </div>
-  </div>
+  </div> -->
+
+  <script src="static\home.js"></script>
+
 {% endblock %}
 
 
 
-<script>
+<!-- <script>
   ScrollReveal().reveal('.track', {
      delay: 500
   });
-</script>
+</script> -->
