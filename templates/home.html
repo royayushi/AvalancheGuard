@@ -64,6 +64,18 @@
                         <input type="file" name="file" accept=".jpg, .png, .jpeg">
                         <input type="submit" value="Detect Avalanche Victims">
                     </form>
+
+                    {% if detection_results %}
+                    <h2>Detection Results:</h2>
+                    <img src="{{ url_for('static', filename=image_path) }}" alt="Detected Image">
+
+                    <!-- <img src="{{ image_path }}" width="400"><br> -->
+                    <ul>
+                    {% for result in detection_results %}
+                    <li>{{ result }}</li>
+                    {% endfor %}
+                    </ul>
+                    {% endif %}
                 </div>
 
             </div>
