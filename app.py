@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, url_for, redirect, jsonify 
-# import os
+import os
 import cv2
 import smtplib
 from email.mime.text import MIMEText
@@ -10,8 +10,8 @@ import datetime
 
 app = Flask(__name__)
 
-# flaskApp = os.getenv("FLASK_APP")
-# flaskDebug = os.getenv("FLASK_DEBUG")
+flaskApp = os.getenv("FLASK_APP")
+flaskDebug = os.getenv("FLASK_DEBUG")
 # app.config['STATIC_URL_PATH'] = 'static'
 
 
@@ -109,4 +109,6 @@ def home_page():
   return render_template('home.html')
 
 if __name__ == "__main__":
-  app.run(host='0.0.0.0', debug = True)
+  print("Before app.run")
+  app.run(host='0.0.0.0', debug=True)
+  print("After app.run")

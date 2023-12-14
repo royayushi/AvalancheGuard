@@ -66,15 +66,31 @@
                     </form>
 
                     {% if detection_results %}
+
                     <h2>Detection Results:</h2>
+
+                    <h2>Uploaded Image:</h2>
+                    <img src="{{ uploaded_image_path }}" alt="Uploaded Image" style="width: 450px; height: 250px;">
+                    
+                    <h2>Detected Image:</h2>
+                    <img src="{{ modified_image_path }}" alt="Detected Image" style="width: 450px; height: 250px;">
+
+                    <ul>
+                      {% for result in detection_results %}
+                      <li>{{ result[0] }} - Confidence: {{ result[1] }}</li>
+                      {% endfor %}
+                    </ul>
+
+                    <!-- <h2>Detection Results:</h2>
                     <img src="{{ url_for('static', filename=image_path) }}" alt="Detected Image">
 
-                    <!-- <img src="{{ image_path }}" width="400"><br> -->
-                    <ul>
+                    <img src="{{ image_path }}" width="400"><br> -->
+                    <!-- <ul>
                     {% for result in detection_results %}
                     <li>{{ result }}</li>
                     {% endfor %}
-                    </ul>
+                    </ul> -->
+
                     {% endif %}
                 </div>
 
